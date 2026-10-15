@@ -39,10 +39,11 @@ public class Player : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            SCORE = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         else
